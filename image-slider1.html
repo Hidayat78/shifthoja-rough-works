@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<style>
+  .image-slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .image-slider__container {
+    position: relative;
+    width: 100%;
+  }
+
+  .image-slider__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-slider__overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1; /* Ensure overlay is above the image */
+  }
+
+  @media (max-width: 768px) {
+    .image-slider__overlay {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+
+    <section class="property-slider">
+        <div class="slider-container">
+            <div class="slider">
+                <!-- Your slider content goes here -->
+                <div class="slide">
+                    <div class="slider">
+                        <div><img src="assets/img/services/serv11.png" alt="Image 1"><div class="slider-overlay">Title 1</div></div>
+                        <div><img src="assets/img/services/serv11.png" alt="Image 2"><div class="slider-overlay">Title 2</div></div>
+                        <!-- Add more images with overlays -->
+                    </div>
+                </div>
+                <!-- Additional slides -->
+            </div>
+            <div class="slider-controls"><span></span></div>
+        </div>
+        <!-- Other content -->
+        <div class="view-similar-properties">View Similar Properties</div>
+        <!-- Other elements -->
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    
+    </body>
+</html>
