@@ -251,6 +251,7 @@
         }
 
         .cc__CarouselBox .cc__slidingBox {
+            display: flex;
             width: auto;
             transition: all .3s ease-in-out;
             white-space: nowrap;
@@ -515,6 +516,130 @@
             right: 0;
             z-index: 1;
         }
+
+        .tupleNew__priceAreaWrap {
+            display: flex;
+        }
+
+        .cc__CarouselContainer {
+            position: relative;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .cc__CarouselBox {
+                overflow-x: hidden;
+            }
+        }
+
+        .cc__CarouselBox {
+            color: #333;
+            width: 100%;
+            overflow: hidden;
+            /* overflow-x: auto; */
+        }
+
+        .cc__CarouselBox .cc__slidingBox {
+            width: auto;
+            transition: all .3s ease-in-out;
+            white-space: nowrap;
+        }
+
+        .tupleNew__priceWrap {
+            min-width: fit-content;
+            padding-right: 16px;
+            display: flex;
+            gap: 4px;
+            flex-direction: column;
+        }
+
+        .cc__CarouselBox .cc__slidingBox div:last-of-type {
+            margin-right: 0;
+        }
+
+        .tupleNew__priceValWrap {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #010c1f;
+            margin-bottom: 4px;
+            white-space: initial;
+        }
+
+        .tupleNew__perSqftWrap {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #091e42;
+        }
+
+        .tupleNew__areaWrap {
+            border-left: 1px solid #ebecf0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding-right: 16px;
+            padding-left: 16px;
+            margin-top: 3px;
+        }
+
+        .tupleNew__totolAreaWrap {
+            display: flex;
+            align-items: flex-end;
+            column-gap: 4px;
+        }
+
+        .tupleNew__area1Type {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #010c1f;
+        }
+
+        .ellipsis {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .tupleNew__area2Type {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #091e42;
+            margin-left: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tupleNew__totolAreaWrap {
+            display: flex;
+            align-items: flex-end;
+            column-gap: 4px;
+        }
+
+        .tupleNew__area1Type {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #010c1f;
+        }
+
+        .proil {
+            height: 44px;
+            width: 44px;
+            border: 1px solid red;
+            border-radius: 50%;
+            overflow: hidden;
+            /* Ensure the image stays within the circular border */
+        }
+
+        .proil img {
+            width: 100%;
+            /* Make the image fill the container */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
     </style>
 </head>
 
@@ -634,15 +759,18 @@
                             </div>
                         </div>
                         <div class="PseudoTupleRevamp__contactWrap">
+                            <div class="proil">
+                                <img src="assets/img/client-face2.png" alt="Profile Image">
+                            </div>
                             <div class="PseudoTupleRevamp__builderInfo">
                                 <div class="PseudoTupleRevamp__contactHeading">Builder</div>
-                                <div class="PseudoTupleRevamp__contactHeading">1 Week</div>
                                 <div class="PseudoTupleRevamp__contactSubheading">Shera Builders</div>
                             </div>
                             <div class="PseudoTupleRevamp__contactDetails">
                                 <div class="pageComponent PseudoTupleRevamp__brochure" data-label="DOWNLOAD_BROCHURE">
                                     Inquery now</div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -966,17 +1094,38 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="tupleNew__moreLessWrapper  tupleNew__mt16"
-                                            id="srp_tuple_description">
-                                            <p class="descPtag_undefined tupleNew__descText "
-                                                style="overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; text-overflow: ellipsis; white-space: normal;">
-                                                Peptech Town is one of the well-known housing society, offering 3 BHK
-                                                Villa for
-                                                sale in Muwasi. Peptech Town is a Ready To Move project . Villas size in
-                                                Peptech
-                                                Town varies from 1,850</p>
-                                            <div data-label="SEE_MORE"><i class="iconS_srpMob_20 icon_dropdown"></i>
+                                    <div class="tupleNew__priceAreaWrap">
+                                        <div id="tuplePriceArea_73418959" style="width: 100%;">
+                                            <div class="cc__CarouselContainer">
+                                                <div class="cc__CarouselBox">
+                                                    <div compattr="tuplePriceArea_73418959"
+                                                        class="cc__slidingBox  cc__inlineFlexStyle">
+                                                        <div class="tupleNew__priceWrap">
+                                                            <div class="tupleNew__priceAndPerSqftWrap ">
+                                                                <div class="tupleNew__priceValWrap"><span>₹22.5
+                                                                        Lac</span><span
+                                                                        class="tupleNew__perSqftWrap"></span></div>
+                                                                <div class="tupleNew__perSqftWrap  ellipsis">₹2,812
+                                                                    /sqft</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tupleNew__areaWrap">
+                                                            <div class="tupleNew__totolAreaWrap "><span
+                                                                    class="tupleNew__area1Type">800 sqft</span><span
+                                                                    class="tupleNew__area2Type  ellipsis">(74 sqm)<img
+                                                                        src="https://static.99acres.com/universalapp/img/downArrowNew.png"
+                                                                        height="20" width="20"></span></div>
+                                                            <div class="tupleNew__areaType">Built-up Area</div>
+                                                        </div>
+                                                        <div class="tupleNew__areaWrap">
+                                                            <div class="tupleNew__totolAreaWrap "><span
+                                                                    class="tupleNew__area1Type">2 BHK </span><span
+                                                                    class="tupleNew__area2Type  ellipsis">(2
+                                                                    Baths)</span></div>
+                                                            <div class="tupleNew__possessionBy">Ready To Move</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -985,7 +1134,6 @@
                         </div>
                         <div class="PseudoTupleRevamp__contactWrap">
                             <div class="PseudoTupleRevamp__builderInfo">
-                                <div class="PseudoTupleRevamp__contactHeading">1 Week</div>
                                 <div class="PseudoTupleRevamp__contactHeading">Builder</div>
                                 <div class="PseudoTupleRevamp__contactSubheading">Shera Builders</div>
                             </div>
