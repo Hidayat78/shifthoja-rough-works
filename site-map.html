@@ -354,10 +354,13 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
         .chhatarpur-site-map img {
             margin-right: 10px;
+            transition: transform 0.3s ease;
         }
 
         .chhatarpur-site-map p {
@@ -365,6 +368,57 @@
             font-size: 1em;
             color: #333;
             font-family: 'Arial', sans-serif;
+        }
+
+        .chhatarpur-site-map:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .chhatarpur-site-map img {
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .chhatarpur-site-map:hover img {
+            transform: scale(1.2);
+        }
+
+        .chhatarpur-site-map p {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Tablet view */
+        @media (max-width: 768px) {
+            .site-head {
+                padding: 15px;
+            }
+
+            .site-head h3 {
+                font-size: 1.8em;
+            }
+
+            .site-head p {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Mobile view */
+        @media (max-width: 480px) {
+            .site-head {
+                padding: 10px;
+            }
+
+            .site-head h3 {
+                font-size: 1.5em;
+            }
+
+            .site-head p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -479,7 +533,7 @@
                 <p>Dwarka Mod</p>
             </div>
             <div class="chhatarpur-site-map">
-                <img src="assets/img/chhatarpur.png" width="35px" height="35px">
+                <img src="assets/img/noida.png" width="35px" height="35px">
                 <p>Noida</p>
             </div>
 
@@ -577,7 +631,7 @@
                 <p>Dwarka Mod</p>
             </div>
             <div class="chhatarpur-site-map">
-                <img src="assets/img/chhatarpur.png" width="35px" height="35px">
+                <img src="assets/img/noida.png" width="35px" height="35px">
                 <p>Noida</p>
             </div>
 
