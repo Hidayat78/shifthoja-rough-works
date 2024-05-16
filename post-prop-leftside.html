@@ -165,8 +165,11 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat; */
+            /* background-image: url(assets/img/post-property-bg-img.png); */
+            background: linear-gradient(to bottom, #e5f3fd, #e5f3fd);
         }
 
+        /* src="{{asset('frontend/mob-service/add.png')}}" */
         .navbar {
             display: flex;
             justify-content: scale-down;
@@ -1258,14 +1261,26 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 20px;
-            margin: 20px;
             color: #fff;
+
+        }
+
+        .col6background-img {
+            position: relative;
+            color: #fff;
+        }
+
+        .col6background-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         .list-stylee li {
             color: black;
             font-size: 14px;
+            margin-bottom: 0px !important;
         }
 
         .fst-talic {
@@ -1355,6 +1370,10 @@
         .servi-box div:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .css-v8jck::-webkit-scrollbar {
+            display: none;
         }
     </style>
 
