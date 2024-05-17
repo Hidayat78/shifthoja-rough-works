@@ -5,7 +5,6 @@
     data-assets-path="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/"
     data-base-url="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1"
     data-framework="laravel" data-template="vertical-menu-theme-default-light">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css">
 
 <head>
     <meta charset="utf-8" />
@@ -161,15 +160,10 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            /* background-image: url(assets/img/post-property-bg-img.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat; */
-            /* background-image: url(assets/img/post-property-bg-img.png); */
-            background: linear-gradient(to bottom, #e5f3fd, #e5f3fd);
+            background-image: url(assets/img/post-property-bg-img.png);
+
         }
 
-        /* src="{{asset('frontend/mob-service/add.png')}}" */
         .navbar {
             display: flex;
             justify-content: scale-down;
@@ -483,6 +477,7 @@
 
 
 
+
         #rootwizard {
 
             height: 600px;
@@ -601,6 +596,7 @@
             font-weight: 600;
 
         }
+
 
 
 
@@ -1256,124 +1252,76 @@
             margin-top: 10px;
         }
 
-        .col6background-img {
-            background-image: url('assets/img/post-property-bg-img.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-
-        }
-
-        .col6background-img {
-            position: relative;
-            color: #fff;
-        }
-
-        .col6background-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        .list-stylee li {
-            color: black;
-            font-size: 14px;
-            margin-bottom: 0px !important;
-        }
-
-        .fst-talic {
-            color: black;
-            font-size: 14px;
-        }
-
-        .bx-check-double {
-            color: #2487ce;
-            font-size: 20px;
-        }
-
-        .servi-box {
-            display: flex;
-        }
-
-        .service-post-prop {
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .service-post-prop h3 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
-        }
-
-        .servi-box {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .servi-box div {
-            background-color: #fff;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            flex: 1 1 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 150px;
-            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-        }
-
-        .servi-box p {
-            margin: 0;
-            font-size: 16px;
-            color: #555;
-            margin-right: 10px;
-        }
-
-        .servi-box img {
-            height: 30px;
-            width: 30px;
-        }
-
-        .half-border {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .half-border::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 50%;
-            height: 2px;
-            background-color: #333;
-            transform: translateX(-50%);
-        }
-
-        .servi-box div:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .servi-box div:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
         .css-v8jck::-webkit-scrollbar {
             display: none;
+        }
+
+        .homepage-wrap .homeface-wrap .homedesc {
+            color: #666;
+        }
+
+        .homepage-wrap .homeface-wrap ul.homepoints {
+            padding: 20px 0;
+        }
+
+        /* .homepage-wrap .homeface-wrap ul.homepoints>li:before {
+            content: '✓';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            border-radius: 50%;
+            line-height: 25px;
+            color: #000;
+            background-color: #eee;
+            text-align: center;
+            vertical-align: middle;
+            overflow: hidden;
+        } */
+        .homepoints>li:before {
+            content: '✓';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            border-radius: 50%;
+            line-height: 25px;
+            color: #000;
+            background-color: #eee;
+            text-align: center;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+
+        .homepage-wrap .overview-desc {
+            text-align: justify;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .homepage-wrap .selling-button {
+            width: 200px;
+            text-align: center
+        }
+
+        .homepage-wrap .seller-story-wrap .selling-button {
+            margin-top: 40px
+        }
+
+        .cbtn {
+            padding: 0 20px;
+            border: 1px solid #e81c28;
+            border-radius: 20px;
+            height: 36px;
+            line-height: 34px;
+            width: 140px;
+        }
+
+        .homepage-wrap .homeface-wrap ul.homepoints>li {
+            padding: 5px 0;
+            color: #555;
         }
     </style>
 
@@ -1381,9 +1329,11 @@
 
 <body>
     <div>
-        <div wire:snapshot="{&quot;data&quot;:{&quot;number&quot;:&quot;91&quot;,&quot;verification&quot;:false,&quot;otp1&quot;:null,&quot;otp2&quot;:null,&quot;otp3&quot;:null,&quot;otp4&quot;:null,&quot;responseMessage&quot;:null,&quot;property&quot;:&quot;&quot;,&quot;list&quot;:&quot;&quot;,&quot;verification_client&quot;:&quot;&quot;,&quot;mobile_no&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;H1zVhJaSjc8Pl83Wz3ZX&quot;,&quot;name&quot;:&quot;frontend.post-property&quot;,&quot;path&quot;:&quot;postproperty&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;75564904482117dfe08d5462a01925a6beacc48181c1659684540e9679e7c633&quot;}"
+
+
+        <div wire:snapshot="{&quot;data&quot;:{&quot;number&quot;:&quot;91&quot;,&quot;verification&quot;:false,&quot;otp1&quot;:null,&quot;otp2&quot;:null,&quot;otp3&quot;:null,&quot;otp4&quot;:null,&quot;responseMessage&quot;:null,&quot;property&quot;:&quot;&quot;,&quot;list&quot;:&quot;&quot;,&quot;verification_client&quot;:&quot;&quot;,&quot;mobile_no&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;fBiN0AaJlHMEUxTtiH65&quot;,&quot;name&quot;:&quot;frontend.post-property&quot;,&quot;path&quot;:&quot;postproperty&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;6abc7fd7c6b3d2aed205b53f2cd77d7033d7cc95e228d8e87828123ec56315c7&quot;}"
             wire:effects="{&quot;url&quot;:{&quot;property&quot;:{&quot;as&quot;:null,&quot;use&quot;:&quot;replace&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;},&quot;list&quot;:{&quot;as&quot;:null,&quot;use&quot;:&quot;replace&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;},&quot;verification_client&quot;:{&quot;as&quot;:null,&quot;use&quot;:&quot;replace&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;},&quot;mobile_no&quot;:{&quot;as&quot;:null,&quot;use&quot;:&quot;replace&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;},&quot;name&quot;:{&quot;as&quot;:null,&quot;use&quot;:&quot;replace&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:&quot;&quot;}}}"
-            wire:id="H1zVhJaSjc8Pl83Wz3ZX">
+            wire:id="fBiN0AaJlHMEUxTtiH65">
 
 
             <nav class="navbar">
@@ -1429,45 +1379,30 @@
                     <div class="col-md-10 col-12">
                         <div class="margin-topp">
                             <div class="row justify-content-center">
-                                <div class="col-md-6 col6background-img">
-                                    <h3>Voluptatem dignissimos provident quasi</h3>
-                                    <p class="fst-talic">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    </p>
-                                    <ul class="list-stylee">
-                                        <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut
-                                        </li>
-                                        <li><i class="bx bx-check-double"></i> Duis aute irure dolor in
-                                            velit.</li>
-                                        <li><i class="bx bx-check-double"></i> Voluptate repellendus
-                                            sint.</li>
-                                    </ul>
-                                    <hr style="width: 50%; margin-bottom: 145px;">
-                                    <div class="service-post-prop">
-                                        <h3 class="half-border">Our Services</h3>
-                                        <div class="servi-box">
-                                            <div>
-                                                <p>Home appliences</p>
-                                                <img src="assets/img/mob-service/utility.png" height="30px"
-                                                    width="30px">
-                                            </div>
-                                            <div>
-                                                <p>Packers & Movers</p>
-                                                <img src="assets/img/mob-service/truck-packers.png" height="30px"
-                                                    width="30px">
-                                            </div>
-                                            <div>
-                                                <p>Rent Pay</p>
-                                                <img src="assets/img/mob-service/loan.png" height="30px" width="30px">
-                                            </div>
-                                            <div>
-                                                <p>Home Services</p>
-                                                <img src="assets/img/mob-service/home-services.png" height="30px"
-                                                    width="30px">
+
+
+                                <div class="col-sm-6 homedesc">
+                                    <h1>Rent/Sell Property Online</h1>
+                                    <div class="d-overview clearfix" data-lazymodule="stripContent" data-p9ignore="true"
+                                        data-module="stripContent" id="mod-stripContent-1">
+
+                                        <div class="overview-desc clearfix" data-p9ignore="true">
+                                            <div class="clearfix hidden" data-type="fullText">As <mark> Shifthoja.com
+                                                </mark> grows
+                                                day by day as a&nbsp;property listing website&nbsp;and marketplace,
+                                                we are here to help our partner&nbsp;sellers&nbsp;to make the most
+                                                of this&nbsp;opportunity. Have you been thinking about&nbsp;how to
+                                                sell a house&nbsp;or&nbsp;the best website for house
                                             </div>
                                         </div>
-                                    </div>
-
+                                    </div><br>
+                                    <ul class="homepoints">
+                                        <li><strong>Unlimited</strong> free listings</li>
+                                        <li><strong>Pay</strong> as you earn</li>
+                                        <li><strong>Stand out</strong> amongst peers</li>
+                                    </ul>
+                                    <div class="selling-button clearfix cbtn cbtn-p popIn" data-type="register-seller"
+                                        data-href="">Start Listing</div>
                                 </div>
                                 <div class="col-md-5 col-12">
                                     <form wire:submit="submit">
@@ -1597,7 +1532,7 @@
     </div>
 
     <!-- Livewire Scripts -->
-    <script src="/livewire/livewire.js?id=6b5eb707" data-csrf="p6ayonHtsdmOsTegCRQA3TdR0NPIkUAdp0OhxyJ5"
+    <script src="/livewire/livewire.js?id=6b5eb707" data-csrf="zpUl9Fg67CpiPYNl6Hylg7H7QpgMcq9dB9Pu5LFJ"
         data-update-uri="/livewire/update" data-navigate-once="true"></script>
 
 
