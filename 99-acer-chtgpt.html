@@ -30,7 +30,7 @@
 
         .inPageSearchBox__inPageSearchBox .InPageTabs .tab__tabs>.tabChild.active {
             font-weight: 700;
-            color: #041533 !important;
+            color: #ffffff !important;
         }
 
         .inPageSearchBox__inPageSearchBox .InPageTabs .tab__tabs .list_header_semiBold {
@@ -99,7 +99,6 @@
 
         .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchField>div.inPageSearchBox__searchFieldInput {
             display: flex;
-            padding: 22px;
             white-space: nowrap;
             overflow-x: auto;
             overflow-y: hidden;
@@ -123,6 +122,8 @@
         .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchField input {
             font-size: 14px;
             width: 98%;
+            outline: none;
+            margin-top: 13px;
             height: 40px;
             border: 0;
             margin-left: 12px;
@@ -142,7 +143,7 @@
         .component__suggest:after {
             line-height: 1.3em;
             display: block;
-            content: "Enter \"City / Locality / Projects / Landmarks...\"";
+            /* content: "Enter \"City / Locality / Projects / Landmarks...\""; */
             position: absolute;
             padding: 5px;
             font-style: italic;
@@ -218,6 +219,62 @@
             width: 100%;
             clear: both;
         }
+
+        .component__suggestor {
+            background-color: #fff;
+            z-index: -1;
+            box-shadow: 0 13px 16px 0 rgba(0, 106, 194, 0.2);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 60px;
+            opacity: 0;
+            visibility: hidden;
+            border: 0;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            animation: component__suggBox 0.3s forwards;
+        }
+
+        .body_small {
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #091E42;
+            display: block;
+            text-align: left;
+        }
+
+        .Ng800 {
+            color: #041533 !important;
+        }
+
+        .component__suggestor ul li {
+            padding: 12px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-bottom: 1px solid #EBECF0;
+        }
+
+        .component__suggestor ul li span {
+            color: #8993A4;
+            font-size: 14px;
+            float: right;
+            display: inline-block;
+        }
+
+        .tab__tabs .tab__bar {
+            background: #006AC2;
+            height: 6px;
+            position: absolute;
+            padding: 0;
+            bottom: 8px;
+            left: 0;
+            display: block;
+            margin: 0;
+            white-space: normal;
+            transition: left .3s ease-in-out;
+        }
     </style>
 </head>
 
@@ -226,7 +283,7 @@
         data-label="IN_PAGE_SEARCH">
         <div id="inPageSearchForm" class="InPageTabs">
             <div class="tab__tabs">
-                <div id="inPageSearchForm_0" class="tabChild list_header_semiBold active pageComponent Ng500  "
+                <div id="inPageSearchForm_0" class="tabChild list_header_semiBold active pageComponent Ng500"
                     data-label="BUY">
                     Buy</div>
                 <div id="inPageSearchForm_1" class="tabChild list_header_semiBold  pageComponent Ng500  "
@@ -255,17 +312,29 @@
                         <div class="inPageSearchBox__inputFilterOptions">
                             <div class="inPageSearchBox__basicFilter">
                                 <div class="list_header_semiBold Ng500 inPageSearchBox__searchDropdown">
-                                    <div class="">All Residential</div>
+                                    <div class="">Select ?</div>
                                 </div>
                                 <div class="inPageSearchBox__searchField">
                                     <div id="d_landmark_inPageSearchBox"
                                         class="pageComponent inPageSearchBox__searchFieldInput"
                                         data-label="SEARCH_INPUT"><i class="iconS_Common_20 icon_search"></i>
                                         <div class="component__DeskSfInput"><input type="text" name="keyword"
-                                                class="component__searchInput" id="keyword2" autocomplete="off"
-                                                value="">
+                                                class="component__searchInput" id="keyword2" value=""
+                                                placeholder="Enter What you want from us">
                                             <div class="component__suggest"></div>
                                         </div>
+                                    </div>
+                                    <div class="component__suggestor">
+                                        <ul id="suggestions_custom"
+                                            class="body_small Ng800 component__inPageAutoSuggSlide">
+                                            <li id="0" class="pageComponent" title="Sector O Mansarovar, Lucknow">
+                                                Sector O Mansarovar, Lucknow <span>Locality</span>
+                                            </li>
+                                            <li id="1" class="pageComponent">
+                                                O Block Annanagar East, Chennai North <span>Locality</span>
+                                            </li>
+
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -293,6 +362,28 @@
         </div>
         <div class="inPageSearchBox__overlay"></div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".tab__tabs .tabChild");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove("active"));
+
+                    // Add active class to the clicked tab
+                    this.classList.add("active");
+
+                    // Update the position of the tab bar
+                    const tabBar = document.querySelector(".tab__tabs .tab__bar");
+                    const activeTab = document.querySelector(".tab__tabs .tabChild.active");
+                    tabBar.style.width = `${activeTab.offsetWidth}px`;
+                    tabBar.style.left = `${activeTab.offsetLeft}px`;
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>
