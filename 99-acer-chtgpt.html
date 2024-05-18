@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inPageSearchBox__inPageSearchBox {
+            width: max-content;
+            margin: 0 auto;
+            position: absolute;
+            top: 272px;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        .inPageSearchBox__inPageSearchBox .InPageTabs .tab__tabs {
+            background-color: #003159;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            padding: 6px 0;
+        }
+
+        .inPageSearchBox__inPageSearchBox .InPageTabs .tab__tabs>.tabChild.active {
+            font-weight: 700;
+            color: #041533 !important;
+        }
+
+        .inPageSearchBox__inPageSearchBox .InPageTabs .tab__tabs .list_header_semiBold {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .inPageSearchBox__inPageSearchBox .InPageTabs .tab__tabs>.tabChild {
+            margin: 0;
+            padding: 16px 32px;
+        }
+
+        .tab__tabsContent {
+            padding: 0;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            background-color: #fff;
+            box-shadow: 0 0 10px 1px rgba(21, 28, 34, 0.5);
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions>.inPageSearchBox__basicFilter {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            flex-wrap: nowrap;
+            min-width: 0;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions>.inPageSearchBox__basicFilter {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            flex-wrap: nowrap;
+            min-width: 0;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchDropdown>div {
+            border-right: 1px solid #EBECF0;
+            padding: 25px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchDropdown>div::after {
+            content: '';
+            border: solid #253858;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            margin: 0 0 3px 8px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchField {
+            position: relative;
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchField>div.inPageSearchBox__searchFieldInput {
+            display: flex;
+            padding: 22px;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 69px;
+            align-items: flex-start;
+        }
+
+        .has-webp .iconS_Common_20.icon_search {
+            background-position: -20px 0;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchField>div.inPageSearchBox__searchFieldInput>* {
+            margin-right: 8px;
+        }
+
+        .component__DeskSfInput {
+            width: 100%;
+            flex: 1;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchField input {
+            font-size: 14px;
+            width: 98%;
+            height: 40px;
+            border: 0;
+            margin-left: 12px;
+            vertical-align: middle;
+            box-shadow: none;
+        }
+
+        .component__suggest {
+            position: absolute;
+            top: 16px;
+            left: 48px;
+            width: 75%;
+            height: 60%;
+            pointer-events: none;
+        }
+
+        .component__suggest:after {
+            line-height: 1.3em;
+            display: block;
+            content: "Enter \"City / Locality / Projects / Landmarks...\"";
+            position: absolute;
+            padding: 5px;
+            font-style: italic;
+            animation: component__animText 15s linear infinite;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 24px;
+            color: #42526E;
+        }
+
+        .inPageSearchBox__nearMe {
+            position: relative;
+        }
+
+        .inPageSearchBox__nearMe .inPageSearchBox__nearMeTag {
+            display: none;
+            height: 45px;
+            position: absolute;
+            top: 120%;
+            right: 0;
+            z-index: 50;
+            pointer-events: none;
+            box-shadow: 0px 8px 12px rgba(31, 92, 163, 0.2);
+            border-radius: 4px;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__inputFilterOptions .inPageSearchBox__searchBtn {
+            padding: 16px;
+        }
+
+        .buttons__primaryRegular {
+            box-shadow: 0 1px 4px 0 rgba(0, 106, 194, 0.2);
+            background: #0078DB;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            outline: none;
+            margin: 0;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 0;
+            min-height: auto;
+            padding: 8px 16px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .inPageSearchBox__searchTabWrap .inPageSearchBox__searchFilters {
+            position: absolute;
+            background: #fff;
+            width: 100%;
+            padding: 40px 28px 20px;
+            z-index: -1;
+            opacity: 0;
+            visibility: hidden;
+            margin-top: -60px;
+            border-radius: 16px;
+            box-shadow: 0 1px 4px 0 rgba(0, 106, 194, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .spacer50:after {
+            content: '';
+            display: block;
+            height: 50px;
+            width: 100%;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hp-search-form" topmost="true" class="pageComponent inPageSearchBox__inPageSearchBox"
+        data-label="IN_PAGE_SEARCH">
+        <div id="inPageSearchForm" class="InPageTabs">
+            <div class="tab__tabs">
+                <div id="inPageSearchForm_0" class="tabChild list_header_semiBold active pageComponent Ng500  "
+                    data-label="BUY">
+                    Buy</div>
+                <div id="inPageSearchForm_1" class="tabChild list_header_semiBold  pageComponent Ng500  "
+                    data-label="RENT">
+                    Rent</div>
+                <div id="inPageSearchForm_2"
+                    class="tabChild list_header_semiBold  pageComponent Ng500  tab__relativePos" data-label="NL">
+                    New Launch<div class="tab__redDot"></div>
+                </div>
+                <div id="inPageSearchForm_3" class="tabChild list_header_semiBold  pageComponent Ng500  "
+                    data-label="PG">
+                    PG / Co-living</div>
+                <div id="inPageSearchForm_4" class="tabChild list_header_semiBold  pageComponent Ng500  "
+                    data-label="COMM">
+                    Commercial</div>
+                <div id="inPageSearchForm_5" class="tabChild list_header_semiBold  pageComponent Ng500  "
+                    data-label="PLOTS">
+                    Plots/Land</div>
+                <div id="inPageSearchForm_6" class="tabChild list_header_semiBold  pageComponent Ng500  ">
+                    Projects</div>
+                <div class="tab__bar" style="width: 54px; left: 20px;"></div>
+            </div>
+            <div class="tab__tabsContent">
+                <div class="">
+                    <div class="inPageSearchBox__searchTabWrap">
+                        <div class="inPageSearchBox__inputFilterOptions">
+                            <div class="inPageSearchBox__basicFilter">
+                                <div class="list_header_semiBold Ng500 inPageSearchBox__searchDropdown">
+                                    <div class="">All Residential</div>
+                                </div>
+                                <div class="inPageSearchBox__searchField">
+                                    <div id="d_landmark_inPageSearchBox"
+                                        class="pageComponent inPageSearchBox__searchFieldInput"
+                                        data-label="SEARCH_INPUT"><i class="iconS_Common_20 icon_search"></i>
+                                        <div class="component__DeskSfInput"><input type="text" name="keyword"
+                                                class="component__searchInput" id="keyword2" autocomplete="off"
+                                                value="">
+                                            <div class="component__suggest"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pageComponent inPageSearchBox__nearMe" data-label="NEAR_ME_SEARCH"
+                                data-custominfo="{&quot;custom_object&quot;:{&quot;preference&quot;:&quot;S&quot;,&quot;res_com&quot;:&quot;R&quot;,&quot;search_type&quot;:&quot;LS&quot;}}"
+                                style="cursor: pointer; height: 30px; white-space: nowrap; border-radius: 36px; display: flex; align-items: center; margin-right: 12px;">
+                                <img src="https://www.99acres.com/universalapp/img/nearMeV2.png" width="40"
+                                    height="40"><img src="https://www.99acres.com/universalapp/img/nearMeTag.png"
+                                    class="inPageSearchBox__nearMeTag">
+                            </div>
+                            <div class="pageComponent undefined" data-label="VOICE_SEARCH_HP_DESKTOP" topmost="true">
+
+                            </div>
+                            <div class="inPageSearchBox__searchBtn"><button type="submit" variant="primaryRegular"
+                                    data-label="SEARCH_SUBMIT"
+                                    data-custominfo="{&quot;custom_object&quot;:{&quot;availableFor&quot;:[],&quot;sharing&quot;:[],&quot;city&quot;:&quot;&quot;,&quot;bedroom_num&quot;:[],&quot;class&quot;:[],&quot;locality&quot;:[],&quot;brandIds&quot;:[],&quot;keyword&quot;:&quot;&quot;,&quot;preference&quot;:&quot;S&quot;,&quot;area_unit&quot;:&quot;1&quot;,&quot;availability&quot;:[],&quot;res_com&quot;:&quot;R&quot;,&quot;property_type&quot;:&quot;&quot;,&quot;E_TYPE&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;},&quot;payload&quot;:{&quot;basic_info&quot;:{&quot;rescom&quot;:&quot;R&quot;,&quot;preference&quot;:&quot;S&quot;}}}"
+                                    class="pageComponent buttons__primaryRegular     undefined "
+                                    data-sstheme="_BUTTON_TOP_LEVEL"><span class=" "
+                                        data-sstheme="_BUTTON_SPAN">Search</span></button></div>
+                        </div>
+                        <div class="inPageSearchBox__searchFilters false "></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inPageSearchBox__overlay"></div>
+    </div>
+</body>
+
+</html>

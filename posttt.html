@@ -160,7 +160,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url(assets/img/post-property-bg-img.png);
+            /* background-image: url(assets/img/post-property-bg-img.png); */
 
         }
 
@@ -1322,10 +1322,19 @@
         .homepage-wrap .homeface-wrap ul.homepoints>li {
             padding: 5px 0;
             color: #555;
+        }
 
+        .col-sm-6.homedesc {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgb(225, 226, 232);
+        }
+
+        .homepoints li {
+            margin-bottom: 4px;
         }
     </style>
-
 </head>
 
 <body>
@@ -1380,10 +1389,9 @@
                     <div class="col-md-10 col-12">
                         <div class="margin-topp">
                             <div class="row justify-content-center">
-
-
                                 <div class="col-sm-6 homedesc">
-                                    <h1>Rent/Sell Property Online</h1>
+                                    <h1 style="color: #000;">Rent or Sell out your Property <span
+                                            style="color: #2299dd;"> Faster</span></h1>
                                     <div class="d-overview clearfix" data-lazymodule="stripContent" data-p9ignore="true"
                                         data-module="stripContent" id="mod-stripContent-1">
 
@@ -1402,8 +1410,9 @@
                                         <li><strong>Pay</strong> as you earn</li>
                                         <li><strong>Stand out</strong> amongst peers</li>
                                     </ul>
-                                    <div class="selling-button clearfix cbtn cbtn-p popIn" data-type="register-seller"
-                                        data-href="">Start Listing</div>
+                                    <div class="img-end">
+                                        <img src="assets/img/vann.png">
+                                    </div>
                                 </div>
                                 <div class="col-md-5 col-12">
                                     <form wire:submit="submit">
@@ -1525,7 +1534,6 @@
                 </div>
             </div>
 
-            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
         </div>
 
 
